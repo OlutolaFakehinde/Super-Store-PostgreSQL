@@ -16,7 +16,7 @@
 
 ## Introduction
 
-This is a project for a Super Store Organisation which sells office supplies, furnishings, maintenance and housekeeping equipment, items for public areas to various properties in different cities in the U.S.A. The project is to help the organisation understands how the business has performed over time.
+This is a project for a Super Store Organisation which sells office supplies, furnishings, maintenance and housekeeping equipment, items for public areas to various properties in different cities in the U.S.A. The project is to help the organisation understand how the business has performed over time.
 
 The organisation provided data on the orders made, products available and the properties the organisation have sold to in the past.
 
