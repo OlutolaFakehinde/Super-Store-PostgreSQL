@@ -2,6 +2,18 @@
 
 ![](Super_Store_pic.jpg)
 
+## Table of Contents
+- [Introduction](#introduction)
+- [Data Sources](#data-sources)
+- [Data Dictionary](#data-dictionary)
+- [Tools](#tools)
+- [Exploratory Data Analysis](#exploratory-data-analysis)
+- [Data Analysis](#data-analysis)
+- [Results](#results)
+- [Findings](#findings)
+- [Recommendations](#recommendations)
+- [Limitations](#limitations)
+
 ## Introduction
 
 This is a project for a Super Store Organisation which sells office supplies, furnishings, maintenance and housekeeping equipment, items for public areas to various properties in different cities in the U.S.A. The project is to help the organisation understands how the business has performed over time.
@@ -26,8 +38,11 @@ The primary dataset for the analysis is the "orders" dataset and the secondary d
 - Excel - For data cleaning (data loading and inspection)
 - PostreSQL - for data analysis
 
-## Exploratory Data Analysis (EDA)
-EDA involves exploring the datasets to investigate the performance of the Supersotore over time, using queries provided by the organisation in PostgreSQL program (pgAdmin 4) like (Two queries were omitted and some were vague):
+## Exploratory Data Analysis
+EDA involves exploring the datasets to investigate the performance of the Superstore over time, using queries provided by the organisation in PostgreSQL program (pgAdmin 4) like (Two queries were omitted and some were vague):
+
+## Data Analysis
+The data provided with the queries were analysed using SQL Server
 
 #### Question 1: Show all details about Properties, Orders and Products.
 
@@ -71,6 +86,7 @@ For distinct products
 SELECT DISTINCT("ProductCategory")
 FROM products;
 ```
+
 #### Question 6: We want to know the different properties that we have made orders
 
 ```SQL
@@ -535,10 +551,99 @@ ON orders."OrderID" = propertyinfo."PropID"
 WHERE "PropertyCity" = 'Las Vegas';
 ```
 
+## Results
+In over 30 queries rised by the organisation, the following findings were noted:
+
+**Question 5 shows 5 distinct "productCategories" from Products Table**
+
+1. Public Areas
+2. Furnishings
+3. Housekeeping
+4. Maintenance
+5. Office Supplies
+
+**Question 8 reviewed 94 products and prices ranging from $300 to $3**
+
+**Question 9 reviewed items with the first five highest price as:**
+
+|ProductName|ProductCategory|Price|
+|---|----|-----------|
+|Bed (King)|Furnishings|$300|
+|Bed (Double)|Furnishings|$250|
+|Sofa|Public Areas|$215|
+|Leaf Blower|Maintenance|$202|
+|Television|Furnishings|$200|
+
+**Question 10 reviewed items with the first five lowest price as:**
+
+|ProductName|ProductCategory|Price|
+|---|----|-----------|
+|Paper Clips|Office Supplies|$3|
+|Washcloth|Housekeeping|$3|
+|Flyer Holder|Public Areas|$3|
+|Hand Towel|Housekeeping|$5|
+|Shower Curtain|Furnishings|$5|
+
+**Question 13 gave the cities and states the products had been sold as:**
+
+|No|City|State|
+|---|----|-----------|
+| 1.|Arlington|Virginia|
+| 2.|Atlanta|Georgia|
+| 3.|Boston|Massachusetts|
+| 4.|Chicago|Illinois|
+| 5.|Cincinnati|Ohio|
+| 6.|Dallas|Texas|
+| 7.|Denver|Colorado|
+| 8.|Kansas City|Missouri|
+| 9.|Las Vegas|Nevada|
+|10.|Los Angeles|California|
+|11.|Nashville|Tennessee|
+|12.|New Orleans|Louisiana|
+|13.|New York|New York|
+|14.|Orlando|Florida|
+|15.|Philadelphia|Pennsylvania|
+|16.|Phoenix|Arizona|
+|17.|Portland|Oregon|
+|18.|Richmond|Virginia|
+|19.|San Francisco|California|
+|20.|Seattle|Washington|
+
+**Question 27 reviews that there were 10,096 quantities of the 94 products sold.**
+
+**Question 28 gave the average price of the products as $52.80**
+
+**Question 35 reviewed the cities where the highest purchases were made as:**
+
+1. Kansas City
+2. Richmond
+3. Nashville
+4. Denver
+5. Los Angeles
+
+These cities had the highest purchases of three quantities each.
+
+**Question 36 reviewed the product and product category of purchase in Las Vegas city as:**
+
+|ProductName|ProductCategory|
+|---|----|
+|Clothes Hanger|Housekeeping|
+
+## Findings
+It was noted that:
+1. The product with the highest price sold is Bed (king) and the lowest price as Paper Clip, Washcloth, and Flyer Holder.
+2. The highest quantities of the products were sold in 5 out of 20 cities
+3. The name of products and categories in each city can be listed as in question 36 
+
+## Recommendations
+In view of the above analysis and findings, I recommend the followings:
+- The organisation should increase investments on the 5 cities with the highest quantities of products sold
+- Efforts should be made to improve sales in other 15 cities with low quantities sold
+- Investigations should be carried out on other states of the country where products were not sold.
+
+## Limitations
+1. Use of other analytic tools like Power BI, Tableau and Python would give more insights and best visualisations to the project.
+2. Some queries were missing, and some would be clearer in other tools.
 
 
-
-
-
-
-
+  
